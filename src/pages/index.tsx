@@ -9,7 +9,7 @@ export default function Home() {
 	return (
 		<div className={'h-full'}>
 			<Head>
-				<title>Portfolio</title>
+				<title>Next.js Test</title>
 				<meta name="description" content="Laurent Blondy portfolio" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>

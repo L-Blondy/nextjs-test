@@ -6,8 +6,8 @@ import RowHeader, { ROW_HEADER_CN } from './RowHeader';
 import { VisibleCells } from './types';
 import { useDynamicRows, useDynamicCols, useVisibleCells } from './utils';
 
-const minRowCount = 100
-const minColCount = 200
+const minRowCount = 50
+const minColCount = 50
 
 interface Props {
 
