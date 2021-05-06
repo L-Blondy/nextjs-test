@@ -13,6 +13,7 @@ export default function Home() {
 			if (el.value === json?.data) return
 			mutate({ data: el.value }, false)
 			postJson({ data: el.value })
+				.catch(console.log)
 		})
 	}
 
