@@ -8,4 +8,5 @@ export class ReadFile {
 		const fileContent = await fs.readFile(filePath, 'utf8')
 		return JSON.parse(fileContent) as T
 	}
+
 }

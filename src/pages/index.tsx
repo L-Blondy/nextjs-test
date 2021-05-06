@@ -10,6 +10,7 @@ export default function Home() {
 		e.preventDefault()
 		const elements = Array.from(e.currentTarget.elements)
 		elements.filter(el => el.tagName === 'INPUT').forEach((el: any) => {
+			if (el.value === json?.data) return
 			mutate({ data: el.value }, false)
 			postJson({ data: el.value })
 		})
