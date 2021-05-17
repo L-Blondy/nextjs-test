@@ -6,6 +6,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 	if (req.method === 'GET') {
 		try {
 			const json = await File.read('src/pages/api/json/json.json')
+			console.log('test')
 			return res.status(200).json(json)
 		}
 		catch (e) {
