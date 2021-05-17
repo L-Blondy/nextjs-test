@@ -11,7 +11,7 @@ export class File {
 		console.log(some_file)
 
 		try {
-			const fileContent = await fs.readFile(filePath, 'utf8')
+			// const fileContent = await fs.readFile(filePath, 'utf8')
 			return { ...some_file, __dirname, cwd: process.cwd() } as T //JSON.parse(fileContent) as T
 		}
 		catch (e) {
