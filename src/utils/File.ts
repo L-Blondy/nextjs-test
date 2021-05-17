@@ -1,14 +1,18 @@
 import { promises as fs } from 'fs'
-import path from 'path'
+import path, { join } from 'path'
+import some_file from 'src/files/file.json'
 
 export class File {
 
 	static async read<T extends unknown>(absPath: string): Promise<T> {
 		const filePath = path.join(process.cwd(), absPath)
+		console.log(process.cwd())
+		console.log(__dirname)
+		console.log(some_file)
 
 		try {
 			const fileContent = await fs.readFile(filePath, 'utf8')
-			return JSON.parse(fileContent) as T
+			return some_file as T //JSON.parse(fileContent) as T
 		}
 		catch (e) {
 			return e
