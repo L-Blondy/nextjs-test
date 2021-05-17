@@ -1,0 +1,7 @@
+{
+	"functions": {
+		"api/json/index.ts": {
+			"includeFiles": "files/**"
+		}
+	}
+}
