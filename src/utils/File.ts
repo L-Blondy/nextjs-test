@@ -12,7 +12,7 @@ export class File {
 
 		try {
 			const fileContent = await fs.readFile(filePath, 'utf8')
-			return some_file as T //JSON.parse(fileContent) as T
+			return { ...some_file, __dirname, cwd: process.cwd() } as T //JSON.parse(fileContent) as T
 		}
 		catch (e) {
 			return e
