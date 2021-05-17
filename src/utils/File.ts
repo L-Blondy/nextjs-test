@@ -6,15 +6,9 @@ export class File {
 
 	static async read<T extends unknown>(absPath: string): Promise<T> {
 		const filePath = path.join(process.cwd(), absPath)
-		// const filePath = path.join(__dirname, 'files', 'file.json')
-		// console.log(process.cwd())
-		// console.log(__dirname)
-		// console.log(filePath)
-		// console.log(some_file)
 
 		try {
 			const fileContent = await fs.readFile(filePath, 'utf8')
-			// const fileContent = await fs.readFile(filePath, 'utf8')
 			return {
 				...JSON.parse(fileContent),
 				__dirname,
